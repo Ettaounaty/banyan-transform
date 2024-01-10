@@ -11,7 +11,7 @@ st.set_page_config(layout="wide", page_title='Banyan Tree')  # Définit la page 
 
 
 
-st.image('logo1.png', width=155)
+
 
 # Définition des styles CSS pour la barre de navigation
 css = f"""
