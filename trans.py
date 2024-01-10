@@ -46,7 +46,7 @@ st.markdown(
 
 
 # Titre de l'application
-st.title('Importation et Manipulation de Fichierlllllllllll')
+st.title('Importation et Manipulation de Fichier')
 
 
 
@@ -138,12 +138,12 @@ if uploaded_file is not None:
 
         # Concaténer les colonnes 'Description' et 'Reference' en une seule colonne 'Description'
         data['Description'] = data['Description'] + ' ' + data['Référence']
-        #data.drop(columns=['Référence'], inplace=True)
+        
         data.drop(columns='Date', inplace=True)
         data['Date']=data['Date1']
         #data['Date'] = data['Date'].astype(str).str.replace('-', '/')
         data.drop(columns=['Compte Marocaine'], inplace=True)
-        #data=data[["code jv", "Date", "Période", "Compte US", "Référence", "Description", "montant", "Devise", "Departement"]]
+        data=data[["code jv", "Date", "Période", "Compte US", "Référence", "Description", "montant", "Devise", "Departement"]]
 
        
         if len(data) > 50:
