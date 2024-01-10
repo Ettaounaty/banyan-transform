@@ -121,6 +121,10 @@ if uploaded_file is not None:
         # Convertir la colonne 'Date' en type datetime
         data['Date'] = pd.to_datetime(data['Date'])
 
+        data['Date1'] = data['Date']
+        data['Date1'] = data['Date1'].dt.strftime('%Y-%m-%d')
+        
+
         
         # Extraire l'année et le mois pour former la colonne 'Période'
         data['Période'] = data['Date'].dt.strftime('%Y%m')  
@@ -133,6 +137,8 @@ if uploaded_file is not None:
         # Concaténer les colonnes 'Description' et 'Reference' en une seule colonne 'Description'
         data['Description'] = data['Description'] + ' ' + data['Référence']
         #data.drop(columns=['Référence'], inplace=True)
+        data.drop(columns='Date', inplace=True)
+        data['Date']=data['Date1']
         data=data[["code jv", "Date", "Période", "Compte US", "Compte Marocaine", "Référence", "Description", "montant", "Devise", "Departement"]]
 
        
