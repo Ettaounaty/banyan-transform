@@ -52,7 +52,7 @@ st.title('Importation et Manipulation de Fichiers Texte')
 
 # Section pour importer le fichier
 st.header('Importer votre fichier texte')
-uploaded_file = st.file_uploader("Choisissez un fichier texte", type=['txt'])
+uploaded_file = st.file_uploader("Choisissez un fichier texte")
 
 if uploaded_file is not None:
     # Lecture du fichier texte
