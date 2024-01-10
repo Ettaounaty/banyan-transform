@@ -46,12 +46,12 @@ st.markdown(
 
 
 # Titre de l'application
-st.title('Importation et Manipulation de Fichiers Texte')
+st.title('Importation et Manipulation de Fichier')
 
 
 
 # Section pour importer le fichier
-st.header('Importer votre fichier texte')
+st.header('Importer votre fichier')
 uploaded_file = st.file_uploader("Choisissez un fichier texte")
 
 if uploaded_file is not None:
