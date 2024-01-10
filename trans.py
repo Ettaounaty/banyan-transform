@@ -143,7 +143,9 @@ if uploaded_file is not None:
 
        
 
-       
+       if len(data) > 50:
+           st.warning("Attention : Le fichier contient plus de 50 lignes après les manipulations.")
+
 
         
         st.write("Manipulations appliquées :")
