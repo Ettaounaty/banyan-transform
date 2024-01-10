@@ -122,7 +122,7 @@ if uploaded_file is not None:
         data['Date'] = pd.to_datetime(data['Date'])
 
         data['Date1'] = data['Date']
-        data['Date1'] = data['Date1'].dt.strftime('%d %B %Y')
+        data['Date1'] = data['Date1'].dt.strftime('%d %m %Y')
         
 
         
