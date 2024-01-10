@@ -142,7 +142,7 @@ if uploaded_file is not None:
         data=data[["code jv", "Date", "Période", "Compte US", "Compte Marocaine", "Référence", "Description", "montant", "Devise", "Departement"]]
 
        
-        if len(data)>50 :
+        if len(data) > 50:
             st.warning("Attention : Le fichier contient plus de 50 lignes après les manipulations.")
        
         
