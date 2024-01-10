@@ -143,7 +143,7 @@ if uploaded_file is not None:
         data['Date']=data['Date1']
         #data['Date'] = data['Date'].astype(str).str.replace('-', '/')
         data.drop(columns=['Compte Marocaine'], inplace=True)
-        data=data[["code jv", "Date", "Période", "Compte US", "Référence", "Description", "montant", "Devise", "Departement"]]
+        #data=data[["code jv", "Date", "Période", "Compte US", "Référence", "Description", "montant", "Devise", "Departement"]]
 
        
         if len(data) > 50:
