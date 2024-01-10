@@ -122,7 +122,9 @@ if uploaded_file is not None:
         data['Date'] = pd.to_datetime(data['Date'])
 
         data['Date1'] = data['Date']
-        data['Date1'] = data['Date1'].dt.strftime('%Y-%m-%d')
+        data['Date1'] = data['Date1'].dt.strftime('%d %B %Y')
+        
+
         
 
         
@@ -139,7 +141,7 @@ if uploaded_file is not None:
         #data.drop(columns=['Référence'], inplace=True)
         data.drop(columns='Date', inplace=True)
         data['Date']=data['Date1']
-        data['Date'] = data['Date'].astype(str).str.replace('-', '/')
+        #data['Date'] = data['Date'].astype(str).str.replace('-', '/')
         data.drop(columns=['Compte Marocaine'], inplace=True)
         data=data[["code jv", "Date", "Période", "Compte US", "Référence", "Description", "montant", "Devise", "Departement"]]
 
